@@ -1,0 +1,13 @@
+function solution(a) {
+    let alturas=a.filter((altura)=> altura !== -1);//excluyo los -1 del nuevo array que cree
+    alturas.sort((a,b)=>a-b);//ordeno el nuevo array que contiene solo las alturas 
+    
+    let j=0;
+    for(let i=0;i<a.length;i++){
+        if(a[i]!==-1){
+            a[i]=alturas[j];
+            j++;
+        }
+    }
+    return a;
+}

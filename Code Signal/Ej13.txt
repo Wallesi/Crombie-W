@@ -1,0 +1,16 @@
+function solution(inputString: string): string {
+   
+   
+   while(inputString.includes('(')){
+      const ultP:number=inputString.indexOf(')');//Indice del ult ) 
+      const primerP=inputString.substring(0,ultP).lastIndexOf("(");//Indice primer (
+      
+      const inicio:string=inputString.substring(0,primerP);//Gaurdo la palabra previa al (
+      const medio:string=inputString.substring(primerP+1,ultP).split('').reverse().join('');//Guardo lo que esta entrte (). Quito espacios, doy vuelta y uno
+      const fin:string=inputString.substring(ultP+1,inputString.length);//Guardo lo que estan desp de )
+      
+      inputString=inicio+medio+fin; //Junto todo
+   }
+   
+   return inputString;
+}

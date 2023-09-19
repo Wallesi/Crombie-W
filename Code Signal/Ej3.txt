@@ -1,0 +1,11 @@
+function solution(inputString) {
+    const check = inputString.split('').reverse().join('');
+    
+    if(inputString == check){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
+}

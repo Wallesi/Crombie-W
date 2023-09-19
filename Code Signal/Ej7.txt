@@ -1,0 +1,22 @@
+function solution(sequence) {
+    let contador=0;
+    const n=sequence.length;
+    
+    for(let i=0;i<n;i++){
+        if(sequence[i] <= sequence[i-1]){
+            contador++;
+            
+            if(contador>1){
+                return false;
+            }
+            else if(i==1 || sequence[i] > sequence[i-2]){
+                continue;
+            }
+            else if(i== n-1 || sequence[i+1] > sequence[i-1]){
+                continue;
+            }
+            return false;
+        }
+    }
+    return true;
+}

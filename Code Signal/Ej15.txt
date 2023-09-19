@@ -1,0 +1,21 @@
+function solution(picture: string[]): string[] {
+    
+    let borde:string="";
+    let retorno:string[]=[];
+    
+     
+       for(let i=0;i<picture[0].length+2;i++){
+           borde+="*";
+       }
+        retorno.push(borde);
+        
+        for(let j=0;j<picture.length;j++){
+            retorno.push("*"+picture[j]+"*");
+        }   
+        retorno.push(borde);
+    
+    
+    
+    
+    return retorno;
+}

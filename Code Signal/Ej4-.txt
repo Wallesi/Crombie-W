@@ -1,0 +1,12 @@
+function solution(inputArray) {
+  let auxArray=[];
+  let aux2;
+  
+  for(let i=0;i<inputArray.length-1;i++){
+      aux2=inputArray[i]*inputArray[i+1];
+      auxArray.push(aux2);
+  }
+  
+  
+  return Math.max(...auxArray);//lo que explico Guils
+}

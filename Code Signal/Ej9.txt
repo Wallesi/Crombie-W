@@ -1,0 +1,18 @@
+function solution(inputArray) {
+   let arreglo2=[];
+   let mayor=0;
+   
+   for(let i=0;i<inputArray.length;i++){
+       if(inputArray[i].length>=mayor){
+           mayor=inputArray[i].length;
+       }
+   }
+    
+    for(let j=0;j<inputArray.length;j++){
+        if(inputArray[j].length===mayor){
+            arreglo2.push(inputArray[j]);
+        }
+    }
+    
+    return arreglo2;
+}

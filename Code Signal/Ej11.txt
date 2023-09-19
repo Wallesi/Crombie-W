@@ -1,0 +1,24 @@
+function solution(n) {
+    let num=n.toString();
+    let largo=num.length;
+    let mitad=Math.floor(largo/2);
+    let sum=0,sum2=0;
+    
+    let primerMitad=num.slice(0,mitad);
+    let segundaMitad=num.slice(mitad);
+    
+    for(let i=0;i<primerMitad.length;i++){
+        sum+=parseInt(primerMitad[i]);
+    }
+    for(let j=0;j<segundaMitad.length;j++){
+        sum2+=parseInt(segundaMitad[j]);
+    }
+    
+    if(sum==sum2){
+        return true;
+    }
+    else{
+        return false;
+    }
+     
+}
